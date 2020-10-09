@@ -26,15 +26,15 @@ public:
     
     int binSrch(vector<int>& arr,int a, int b,int n){
        if(b>=a){ 
-        int mid = a +(b-a)/2;
-        if(arr[mid]==n)return mid;
-        if(arr[mid] < n){
-            return binSrch(arr,mid+1,b,n);
-        }
-        return binSrch(arr,0,mid-1,n);
-        }
+            int mid = a +(b-a)/2;
+            if(arr[mid]==n)return mid;
+            if(arr[mid] < n)
+                return binSrch(arr,mid+1,b,n);
+            return binSrch(arr,0,mid-1,n);
+    
         return -1;
         }
+
     int search(vector<int>& nums, int target) {
         return binSrch(nums,0, nums.size(),target);
     }
