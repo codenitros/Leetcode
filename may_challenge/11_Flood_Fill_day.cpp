@@ -30,6 +30,10 @@ to the starting pixel.
 //solution
 
 //BFS solution
+
+#include<bits/stdc++.h>
+
+using namespace std;
 class Solution {
 public:
     bool isValidPosition(int i,int j,int m,int n){
@@ -103,3 +107,11 @@ public:
         
     }
 };
+
+int main()
+{
+    vector<vector<int>> inp_img = {{1,1,1},{1,1,0},{1,0,1}};
+    Solution obj;
+    obj.floodFill(inp_img, 1, 1, 2);
+    return 0;
+}

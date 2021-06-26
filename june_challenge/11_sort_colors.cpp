@@ -13,7 +13,8 @@ Output: [0,0,1,1,2,2]
 */
 
 //solution
-
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     
@@ -42,3 +43,15 @@ public:
         }
     }
 };
+
+int main()
+{
+    vector<int> input = {2,0,2,1,1,0};
+    Solution obj;
+    obj.sortColors(input);
+    for(int i=0;i<6;i++)
+    {
+        cout<<input[i]<<" ";
+    }
+    return 0;
+}
